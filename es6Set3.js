@@ -123,5 +123,5 @@ const printMultipleOfFive = (arr) => {
 // ques-5
 const startsWithA = (str) => str[0] === "A";
 
-console.log(startsWithA("Akshita")); // true
-console.log(startsWithA("Jeena")); // false
+// console.log(startsWithA("Akshita")); // true
+// console.log(startsWithA("Jeena")); // false
