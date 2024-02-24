@@ -75,4 +75,64 @@ const people = [
 // console.log(filterByAge(people));
 
 // ques - 9
+const filterByScore = () => {
+  return students.filter((stu) => stu.score > 80);
+};
+const students = [
+  { name: "Aditya", score: 85 },
+  { name: "Bob", score: 75 },
+  { name: "Charlie", score: 90 },
+];
 
+// console.log(filterByScore(students));
+
+// ques - 10
+const filterByCityAndAge = (studentData) => {
+  return studentData.filter((stu) => stu.city === "Indore" && stu.age > 70);
+};
+const studentData = [
+  { name: "Vaishnavi", age: 75, city: "Indore" },
+  { name: "Akshay", age: 60, city: "Delhi" },
+  { name: "Udit", age: 80, city: "Indore" },
+  { name: "Venki", age: 80, city: "Bangalore" },
+];
+const filteredPeople = filterByCityAndAge(studentData);
+// console.log(filteredPeople);
+
+// ques - 11
+const filterByGenre = (books) => {
+  return books.filter((book) => book.genre === "Science Fiction");
+};
+const books = [
+  {
+    title: "The Hitchhiker's Guide to the Galaxy",
+    author: "Douglas Adams",
+    genre: "Science Fiction",
+  },
+  {
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    genre: "Fiction",
+  },
+  { title: "1984", author: "George Orwell", genre: "Science Fiction" },
+  { title: "Pride and Prejudice", author: "Jane Austen", genre: "Romance" },
+];
+
+const filteredBooks = filterByGenre(books, "Science Fiction");
+// console.log(filteredBooks);
+
+// ques - 12
+const filterBySalary = (employees) => {
+  return employees.filter(
+    (employee) => employee.salary > 22000 && employee.age > 25
+  );
+};
+const employees = [
+  { name: "Abhay", age: 25, salary: 20000 },
+  { name: "Joice", age: 30, salary: 35000 },
+  { name: "Reena", age: 35, salary: 15000 },
+  { name: "Jeena", age: 40, salary: 50000 },
+];
+
+const filteredEmployees = filterBySalary(employees, 22000, 25);
+console.log(filteredEmployees);
