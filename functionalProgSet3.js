@@ -177,7 +177,7 @@ const novelBooks = [
 const getTitlesWithMoreThan700Pages = (novelBooks) => {
   return novelBooks
     .filter((book) => book.pageCount > 700)
-    .map((book) => book.title);
+    .map((book) => book.title)
 };
 const booksWithMoreThan700Pages = getTitlesWithMoreThan700Pages(books);
 console.log(booksWithMoreThan700Pages);
