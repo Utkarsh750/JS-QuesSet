@@ -38,12 +38,12 @@ Array.prototype.myMapArray = function (cb) {
   return temp;
 };
 
-// const nums = [2, 4, 6, 8];
+const nums = [2, 4, 6, 8];
 const multiThree = nums.myMapArray((num, i, arr) => {
   return num * 3;
 });
 
-console.log(multiThree);
+// console.log(multiThree);
 
 // Pollyfill for filter
 
@@ -61,6 +61,21 @@ Array.prototype.myFilter = function (cb) {
 const numsFilter = [1, 2, 3, 4];
 const moreThanTwo = numsFilter.myFilter((num) => num > 2);
 
-console.log(moreThanTwo);
+// console.log(moreThanTwo);
 
-// Pollyfill for reduce
+// Pollyfill for forEach
+
+const num = [1, 2, 3, 4, 5];
+
+// num.forEach((el) => console.log(el));
+
+function printElementOfForEach(el) {
+  console.log(el);
+}
+Array.prototype.myForEach = function (cb) {
+  for (let index = 0; index < this.length; index++) {
+    cb(this[index]);
+  }
+};
+
+num.myForEach(printElementOfForEach)
