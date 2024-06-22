@@ -19,17 +19,3 @@ const fib = (n) => {
 };
 
 // fib(7);
-
-const obj = {
-  "name": "Utkarsh",
-  "lastName": "Sharma",
-  age: 21,
-  
-  printName : function(){
-      // console.log(this.age)
-      return this.name
-  }
-}
-
-// console.log(obj.printName())
-// obj.printName()
