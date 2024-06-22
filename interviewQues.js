@@ -32,14 +32,14 @@ Array.prototype.myMapArray = function (cb) {
   let temp = []; // to create new array we require a empty array so we took this
 
   for (let i = 0; i < this.length; i++) {
-    temp.push(cb(this[i], i, this));
+    temp.push(cb(this[i]));
   }
 
   return temp;
 };
 
 const nums = [2, 4, 6, 8];
-const multiThree = nums.myMapArray((num, i, arr) => {
+const multiThree = nums.myMapArray((num) => {
   return num * 3;
 });
 
@@ -51,17 +51,17 @@ Array.prototype.myFilter = function (cb) {
   let temp = [];
 
   for (let i = 0; i < this.length; i++) {
-    if (cb(this[i], i, this)) {
+    if (cb(this[i])) {
       temp.push(this[i]);
     }
   }
   return temp;
 };
 
-const numsFilter = [1, 2, 3, 4];
-const moreThanTwo = numsFilter.myFilter((num) => num > 2);
+const numsFilter = [1, 2, 3, 4,6,5,35];
+const moreThanTwo = numsFilter.myFilter((num) => num >= 2);
 
-// console.log(moreThanTwo);
+console.log(moreThanTwo);
 
 // Pollyfill for forEach
 
@@ -78,4 +78,4 @@ Array.prototype.myForEach = function (cb) {
   }
 };
 
-num.myForEach(printElementOfForEach)
+// num.myForEach(printElementOfForEach)
