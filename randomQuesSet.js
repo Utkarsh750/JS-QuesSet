@@ -61,3 +61,15 @@ var map1 = new Map([
 // for (var key of map1) {
 //   console.log(key);
 // }
+
+const thisObj = {
+  name: "Utkarsh",
+  lname: "sharma",
+  age: 21,
+
+  func: function () {
+    console.log(thisObj.age);
+  },
+};
+
+thisObj.func();
