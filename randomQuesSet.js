@@ -47,4 +47,17 @@ function Name() {
 
   Name1();
 }
-Name();
+// Name();
+
+var map1 = new Map([
+  [1, "one"],
+  ["whole number", [0, 1, 2, 3, 4]],
+  ["fName", "Utkarsh"],
+]);
+// console.log(map1.get("whole number"));
+// console.log(map1);
+
+// var key = map1.keys();
+// for (var key of map1) {
+//   console.log(key);
+// }
