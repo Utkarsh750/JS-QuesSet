@@ -30,4 +30,18 @@ function sumOfDigits(num) {
   return sum;
 }
 
-console.log(sumOfDigits(1234));
+// console.log(sumOfDigits(1234));
+
+// COUNT THE NUMBER OF DIGITS
+function countDigits(num) {
+  let count = 0;
+
+  do {
+    count++;
+    num = Math.floor(num / 10);
+  } while (num > 0);
+
+  return count;
+}
+
+console.log(countDigits(23587873));
