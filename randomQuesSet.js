@@ -72,4 +72,12 @@ const thisObj = {
   },
 };
 
-thisObj.func();
+// thisObj.func();
+
+console.log("this");
+
+setTimeout(() => {
+  console.log("is");
+  console.log("asynchronous");
+}, 2000);
+
