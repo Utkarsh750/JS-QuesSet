@@ -44,4 +44,10 @@ function countDigits(num) {
   return count;
 }
 
-console.log(countDigits(23587873));
+// console.log(countDigits(23587873));
+
+const arr = [1, 2, 3, 4, "Utkarsh", 6, { hello: "hello" }];
+arr.pop();
+arr.push({ Lname: "Sharma" });
+arr.pop();
+console.log(arr);
