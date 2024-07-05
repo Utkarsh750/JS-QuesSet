@@ -50,4 +50,7 @@ const arr = [1, 2, 3, 4, "Utkarsh", 6, { hello: "hello" }];
 arr.pop();
 arr.push({ Lname: "Sharma" });
 arr.pop();
+// console.log(arr);
+// arr.sort();
+arr.sort((a, b) => b - a);
 console.log(arr);
