@@ -54,3 +54,27 @@ arr.pop();
 // arr.sort();
 arr.sort((a, b) => b - a);
 console.log(arr);
+
+// Bubble sort
+const bubbleSort = (arr) => {
+  const n = arr.length;
+
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
+    }
+  }
+  return arr;
+};
+
+// console.log(bubbleSort([28, 56, 3, 12, 43, 0]));
+
+const uniqueElement = (arr) => {
+  const newUniqueElement = new Set(arr);
+
+  console.log(newUniqueElement);
+};
+
+uniqueElement([12,32,12,14,13,54,13])
