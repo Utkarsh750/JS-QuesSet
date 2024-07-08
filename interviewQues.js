@@ -58,7 +58,7 @@ Array.prototype.myFilter = function (cb) {
   return temp;
 };
 
-const numsFilter = [1, 2, 3, 4,6,5,35];
+const numsFilter = [1, 2, 3, 4, 6, 5, 35];
 const moreThanTwo = numsFilter.myFilter((num) => num >= 2);
 
 console.log(moreThanTwo);
@@ -79,3 +79,19 @@ Array.prototype.myForEach = function (cb) {
 };
 
 // num.myForEach(printElementOfForEach)
+
+// POLLYFILL FOR PROMISE.ALL
+
+let promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Promise1");
+  }, 5000);
+});
+
+let promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("promise2");
+  }, 100);
+});
+
+Promise.all([promise1, promise2]).then(console.log).catch(console.log);
