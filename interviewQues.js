@@ -61,7 +61,7 @@ Array.prototype.myFilter = function (cb) {
 const numsFilter = [1, 2, 3, 4, 6, 5, 35];
 const moreThanTwo = numsFilter.myFilter((num) => num >= 2);
 
-console.log(moreThanTwo);
+// console.log(moreThanTwo);
 
 // Pollyfill for forEach
 
@@ -94,4 +94,27 @@ let promise2 = new Promise((resolve, reject) => {
   }, 100);
 });
 
-Promise.all([promise1, promise2]).then(console.log).catch(console.log);
+// Promise.all([promise1, promise2]).then(console.log).catch(console.log);
+
+// Pollyfill for flat
+
+let arr = [12, 3, [4, 6, [45, 65]]];
+
+Array.prototype.myFlatArray = function (depth) {
+  let res = [];
+  if (!Array.isArray) {
+    throw new Error(`${this} is not an Function`);
+  }
+
+  this.forEach((el) => {
+    if (Array.isArray(el) && depth > 0) {
+      res.push(...el.myFlatArray(depth - 1));
+    } else {
+      res.push(el);
+    }
+  });
+
+  return res;
+};
+
+console.log(arr.myFlatArray());
