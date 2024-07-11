@@ -117,4 +117,4 @@ Array.prototype.myFlatArray = function (depth) {
   return res;
 };
 
-console.log(arr.myFlatArray());
+// console.log(arr.myFlatArray());
