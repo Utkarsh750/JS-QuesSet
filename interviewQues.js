@@ -94,7 +94,7 @@ let promise2 = new Promise((resolve, reject) => {
   }, 100);
 });
 
-// Promise.all([promise1, promise2]).then(console.log).catch(console.log);
+Promise.all([promise2, promise1]).then(console.log).catch(console.log);
 
 // Pollyfill for flat
 
