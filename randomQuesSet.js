@@ -74,12 +74,27 @@ const thisObj = {
 
 // thisObj.func();
 
-console.log("this");
 
-setTimeout(() => {
-  console.log("is");
-  console.log("asynchronous");
-}, 2000);
+// setTimeout(() => {
+//   console.log("is");
+//   console.log("asynchronous");
+// }, 2000);
 
+const myPromise = new Promise((resolve, reject) => {
+  const success = false; // Change to false to see the rejection case
+  if (success) {
+    resolve("Promise fulfilled!");
+  } else {
+    reject("Promise rejected!");
+  }
+});
+
+myPromise
+  .then((message) => {
+    console.log(message); // Output: Promise fulfilled!
+  })
+  .catch((error) => {
+    console.error(error); // This will not run since the promise is resolved
+  });
 
 
