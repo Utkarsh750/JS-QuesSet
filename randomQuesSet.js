@@ -80,21 +80,44 @@ const thisObj = {
 //   console.log("asynchronous");
 // }, 2000);
 
-const myPromise = new Promise((resolve, reject) => {
-  const success = false; // Change to false to see the rejection case
-  if (success) {
-    resolve("Promise fulfilled!");
-  } else {
-    reject("Promise rejected!");
-  }
-});
+// const myPromise = new Promise((resolve, reject) => {
+//   const success = false; // Change to false to see the rejection case
+//   if (success) {
+//     resolve("Promise fulfilled!");
+//   } else {
+//     reject("Promise rejected!");
+//   }
+// });
 
-myPromise
-  .then((message) => {
-    console.log(message); // Output: Promise fulfilled!
-  })
-  .catch((error) => {
-    console.error(error); // This will not run since the promise is resolved
-  });
+// myPromise
+//   .then((message) => {
+//     console.log(message); // Output: Promise fulfilled!
+//   })
+//   .catch((error) => {
+//     console.error(error); // This will not run since the promise is resolved
+//   });
+
+  // asyn/await ques
+  function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+  async function asyncFunction() {
+    console.log("Before wait");
+    await wait(2000); // Wait for 2 seconds
+    console.log("After wait");
+  }
+  
+  // asyncFunction();
+  // Output:
+  // Before wait
+  // (Waits for 2 seconds)
+  // After wait
+
+  function higherOrderFunction(callback) {
+    callback();
+}
+
+higherOrderFunction(() => console.log('Hello from callback!'));
 
 
