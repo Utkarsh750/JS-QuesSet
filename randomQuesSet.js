@@ -119,3 +119,5 @@ const thisObj = {
 }
 
 higherOrderFunction(() => console.log('Hello from callback!'));
+
+
