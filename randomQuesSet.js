@@ -74,7 +74,6 @@ const thisObj = {
 
 // thisObj.func();
 
-
 // setTimeout(() => {
 //   console.log("is");
 //   console.log("asynchronous");
@@ -117,5 +116,4 @@ const thisObj = {
   function higherOrderFunction(callback) {
     callback();
 }
-
 higherOrderFunction(() => console.log('Hello from callback!'));
