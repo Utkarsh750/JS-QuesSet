@@ -116,4 +116,19 @@ const thisObj = {
   function higherOrderFunction(callback) {
     callback();
 }
-higherOrderFunction(() => console.log('Hello from callback!'));
+// higherOrderFunction(() => console.log('Hello from callback!'));
+console.log('varName', varName);
+var varName 
+console.log("varName", varName)
+varName = "Capt. America"
+console.log("varName", varName)
+fn()
+function fn(){
+  console.log("Hello from fn")
+}
+fn()
+fnContainer()
+var container = function(){
+  console.log("I am an expression")
+}
+fnContainer()
