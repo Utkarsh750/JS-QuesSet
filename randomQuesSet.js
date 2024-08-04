@@ -127,8 +127,7 @@ function fn(){
   console.log("Hello from fn")
 }
 fn()
-fnContainer()
-var container = function(){
-  console.log("I am an expression")
-}
-fnContainer()
+
+const x = 10;
+const y = 20;
+console.log(`Sum: ${x + y}`);
